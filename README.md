@@ -7,7 +7,7 @@ This mod adds a few new things to the game:
  - **Steam Locomotive**: A locomotive powered by *steam barrels* or *superheated steam barrels*
  - **Steam Barrel**: Fill barrels with 500 units of steam with a temperature of at least 165 degrees.
  - **Superheated Steam Barrel**: Fill barrels with 500 units of steam with a temperature of at least 500 degrees.
- - **Steam-Steam Heat Exchange** (chemical plant recipe): Mix superheated steam with water to cool it. While cooling it will increase in volume at a ratio of 6:19. A single heat exchanger can supply 3 chemical plants.
+ - **Steam-Steam Heat Exchange** (chemical plant recipe): Mix superheated steam with water to cool it. While cooling it will increase in volume at a ratio of 6:19.
 
  ## Balancing
 
