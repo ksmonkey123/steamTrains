@@ -123,7 +123,7 @@ local steamExpansionRecipe = {
   icon = "__steamTrains__/graphics/icons/steam-expansion.png",
   icon_size = 64, icon_mipmaps = 4,
   subgroup = "fluid-recipes",
-  order = "a[fluid-chemistry]-steam",
+  order = "f[fluid-chemistry]-a[steam]",
   emissions_multiplier = 0,
   crafting_machine_tint =
   {
