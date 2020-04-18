@@ -1,4 +1,8 @@
-# Version 0.18.1 / 0.17.1
+# Changelog
+## Version 0.18.2 / 0.17.2
+ - Decreased thumbnail size.
+
+## Version 0.18.1
  - Increased steam barrel stack size to 10.
  - Changed Steam locomotive slot assignments from 5 -> 1 to 3 -> 3. (The steam locomotive can now hold 30 barrels instead of 5).
  - Increased Energy of superheated steam barrel to 45MJ. (reduced power loss from 38.1% to 7.22%)
@@ -6,5 +10,5 @@
  - Changed steam-steam heat exchange to produce 95 units of cool steam for every 30 units of hot steam (instead of 90).
  - Changed steam-steam heat exchange to only consume 80 units of water (instead of 90).
 
-# Version 0.18.0
+## Version 0.18.0
  - Initial Release
