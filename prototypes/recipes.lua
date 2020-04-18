@@ -113,11 +113,11 @@ local steamExpansionRecipe = {
   ingredients =
   {
     {type="fluid", name="steam", amount=30, minimum_temperature = 500.0},
-    {type="fluid", name="water", amount=90}
+    {type="fluid", name="water", amount=80}
   },
   results=
   {
-    {type="fluid", name="steam", amount=90, temperature = 165.0}
+    {type="fluid", name="steam", amount=95, temperature = 165.0}
   },
   main_product= "",
   icon = "__steamTrains__/graphics/icons/steam-expansion.png",

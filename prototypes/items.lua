@@ -41,13 +41,15 @@ local steamBarrel = {
   },
   name = "steam-barrel",
   order = "z[steam-barrel-165]",
-  stack_size = 1,
+  stack_size = 10,
   subgroup = "fill-barrel",
   type = "item",
   fuel_category = "steam",
   fuel_emission_multiplier = 0,
   fuel_value = "15MJ",
-  burnt_result = "empty-barrel"
+  burnt_result = "empty-barrel",
+  fuel_acceleration_multiplier = 1.2,
+  fuel_top_speed_multiplier = 1.05
 }
 
 
@@ -57,8 +59,8 @@ superSteamBarrel.order = "z[steam-barrel-500]"
 superSteamBarrel.localised_name[2][1] = "fluid-name.super-steam"
 superSteamBarrel.icons[2].tint.r = 1.0
 superSteamBarrel.icons[3].tint.r = 1.0
-superSteamBarrel.fuel_value = "30MJ"
-superSteamBarrel.fuel_acceleration_multiplier = 1.2
+superSteamBarrel.fuel_value = "45MJ"
+superSteamBarrel.fuel_acceleration_multiplier = 1.5
 superSteamBarrel.fuel_top_speed_multiplier = 1.1
 
 data:extend({
