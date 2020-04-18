@@ -4,7 +4,7 @@ local fillSteamRecipe = {
   allow_decomposition = false,
   category = "crafting-with-fluid",
   enabled = false, -- can set to true to ignore tech unlocks
-  energy_required = 12.5,
+  energy_required = 2,
   icon_mipmaps = 4,
   icon_size = 64,
   icons = {
@@ -109,7 +109,7 @@ local steamExpansionRecipe = {
   name = "steam-expansion",
   category = "chemistry",
   enabled = false,
-  energy_required = 1,
+  energy_required = 0.3,
   ingredients =
   {
     {type="fluid", name="steam", amount=30, minimum_temperature = 500.0},
@@ -128,7 +128,7 @@ local steamExpansionRecipe = {
   crafting_machine_tint =
   {
     primary = {r = 0.6, g = 1, b = 1, a = 1.000},
-	secondary = {r = 1, g = 1, b = 1, a = 1.000},
+		secondary = {r = 1, g = 1, b = 1, a = 1.000},
     tertiary = {r = 1, g = 1, b = 1, a = 0.010},
   }
 }
