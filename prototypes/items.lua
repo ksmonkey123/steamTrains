@@ -1,80 +1,54 @@
+local fluid_locomotive_item = table.deepcopy(data.raw["item-with-entity-data"]["locomotive"])
+fluid_locomotive_item.name = "SteamTrains-locomotive"
+fluid_locomotive_item.order = "a[train-system]-fa[steam-locomotive]"
+fluid_locomotive_item.place_result = "SteamTrains-locomotive"
 
-local iconSize = data.raw.item["empty-barrel"].icon_size -- 32px in v0.17, 64px in v0.18
-
-local steamBarrel = {
-  icon_mipmaps = 4,
-  icon_size = 64,
-  icons = {
-    {
-      icon = "__base__/graphics/icons/fluid/barreling/empty-barrel.png",
-      icon_mipmaps = 4,
-      icon_size = iconSize -- 32px in v0.17, 64px in v0.18
-    },
-    {
-      icon = "__base__/graphics/icons/fluid/barreling/barrel-side-mask.png",
-      icon_mipmaps = 4,
-      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
-      tint = {
-        a = 0.75,
-        b = 0.6,
-        g = 0.34,
-        r = 0.7 -- was 0.0 for water barrels
-      }
-    },
-    {
-      icon = "__base__/graphics/icons/fluid/barreling/barrel-hoop-top-mask.png",
-      icon_mipmaps = 4,
-      icon_size = iconSize, -- 32px in v0.17, 64px in v0.18
-      tint = {
-        a = 0.75,
-        b = 0.7,
-        g = 0.7,
-        r = 0.7 -- was 0.0 for water barrels
-      }
-    }
-  },
-  localised_name = {
-    "item-name.filled-barrel",
-    {
-      "fluid-name.steam"
-    }
-  },
-  name = "steam-barrel",
-  order = "z[steam-barrel-165]",
-  stack_size = 10,
-  subgroup = "fill-barrel",
-  type = "item",
-  fuel_category = "steam",
-  fuel_emission_multiplier = 0,
-  fuel_value = "15MJ",
-  burnt_result = "empty-barrel",
-  fuel_acceleration_multiplier = 1.2,
-  fuel_top_speed_multiplier = 1.05
-}
-
-
-local superSteamBarrel = table.deepcopy(steamBarrel)
-superSteamBarrel.name = "super-steam-barrel"
-superSteamBarrel.order = "z[steam-barrel-500]"
-superSteamBarrel.localised_name[2][1] = "fluid-name.super-steam"
-superSteamBarrel.icons[2].tint.r = 1.0
-superSteamBarrel.icons[3].tint.r = 1.0
-superSteamBarrel.fuel_value = "45MJ"
-superSteamBarrel.fuel_acceleration_multiplier = 1.5
-superSteamBarrel.fuel_top_speed_multiplier = 1.1
-
-data:extend({
-  {
+local fluid_locomotive_item = {
     type = "item-with-entity-data",
-    name = "steam-locomotive",
+    name = "SteamTrains-locomotive",
     icon = "__steamTrains__/graphics/icons/steam-locomotive.png",
     icon_size = 64,
 	icon_mipmaps = 4,
     subgroup = "transport",
     order = "a[train-system]-fz[diesel-locomotive]",
-    place_result = "steam-locomotive",
+    place_result = "SteamTrains-locomotive",
     stack_size = 5
-  },
-  steamBarrel,
-  superSteamBarrel
-})
+  }
+
+data:extend({fluid_locomotive_item})
+
+local fluid_steam = data.raw["fluid"]["steam"]
+
+local steam_proxy = {
+	type = "item",
+	icon = fluid_steam.icon,
+	icon_size = fluid_steam.icon_size,
+	icon_mipmaps = fluid_steam.icon_mipmaps,
+	icons = fluid_steam.icons,
+	stack_size = 4294967295,
+	fuel_category = "SteamTrains-steam",
+	flags = {"hidden"},
+	name = "SteamTrains-steamProxy",
+	localised_name = {"", {"fluid-name.steam"}},
+	fuel_value = "1500kJ",
+	fuel_acceleration_multiplier = 1.2,
+	fuel_top_speed_multiplier = 1.05
+}
+
+local mixed_steam_proxy = table.deepcopy(steam_proxy)
+mixed_steam_proxy.name = "SteamTrains-mixedSteamProxy"
+mixed_steam_proxy.localised_name = {"", {"fluid-name.SteamTrains-mixedSteam"}}
+mixed_steam_proxy.fuel_value = "3MJ"
+mixed_steam_proxy.fuel_acceleration_multiplier = 1.4
+mixed_steam_proxy.fuel_top_speed_multiplier = 1.05
+mixed_steam_proxy.flags = {"hidden","hide-from-fuel-tooltip"}
+
+local hot_steam_proxy = table.deepcopy(steam_proxy)
+hot_steam_proxy.name = "SteamTrains-hotSteamProxy"
+hot_steam_proxy.localised_name = {"", {"fluid-name.SteamTrains-hotSteam"}}
+hot_steam_proxy.fuel_value = "4850kJ"
+hot_steam_proxy.fuel_acceleration_multiplier = 1.5
+hot_steam_proxy.fuel_top_speed_multiplier = 1.1
+hot_steam_proxy.flags = {"hidden","hide-from-fuel-tooltip"}
+
+data:extend({steam_proxy, mixed_steam_proxy, hot_steam_proxy})
