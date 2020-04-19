@@ -1,7 +1,11 @@
 {
-  "name": "steamTrains",
-  "version": "0.17.3",
-  "title": "Steam Trains",
-  "author": "ksmonkey123",
-  "factorio_version": "0.17"
+	"name": "steamTrains",
+	"version": "0.17.4",
+	"title": "Steam Trains",
+	"author": "ksmonkey123",
+	"contact": "",
+	"homepage": "",
+	"description": "",
+	"factorio_version": "0.17",
+	"dependencies": ["base >= 0.17.79"]
 }
