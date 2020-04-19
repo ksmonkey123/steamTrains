@@ -1,8 +1,3 @@
-local fluid_locomotive_item = table.deepcopy(data.raw["item-with-entity-data"]["locomotive"])
-fluid_locomotive_item.name = "SteamTrains-locomotive"
-fluid_locomotive_item.order = "a[train-system]-fa[steam-locomotive]"
-fluid_locomotive_item.place_result = "SteamTrains-locomotive"
-
 local fluid_locomotive_item = {
     type = "item-with-entity-data",
     name = "SteamTrains-locomotive",
@@ -13,9 +8,22 @@ local fluid_locomotive_item = {
     order = "a[train-system]-fz[diesel-locomotive]",
     place_result = "SteamTrains-locomotive",
     stack_size = 5
-  }
+}
 
-data:extend({fluid_locomotive_item})
+local old_locomotive = {
+    type = "item-with-entity-data",
+    name = "steam-locomotive",
+    icon = "__steamTrains__/graphics/icons/steam-locomotive.png",
+    icon_size = 64,
+	icon_mipmaps = 4,
+    subgroup = "transport",
+    order = "a[train-system]-fz[diesel-locomotive]",
+    place_result = "steam-locomotive",
+    stack_size = 5,
+	flags = { "hidden" }
+}
+
+data:extend({fluid_locomotive_item, old_locomotive})
 
 local fluid_steam = data.raw["fluid"]["steam"]
 

@@ -6,6 +6,10 @@ fluid_locomotive.burner.fuel_category = "SteamTrains-steam"
 fluid_locomotive.burner.fuel_inventory_size = 1
 fluid_locomotive.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
 
+local steam_loco = util.table.deepcopy(data.raw["locomotive"]["locomotive"])
+steam_loco.name = "steam-locomotive"
+steam_loco.minable.result = "SteamTrains-locomotive"
+steam_loco.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
 
 -- Add new locomotive to the game
-data:extend({fluid_locomotive})
+data:extend({steam_loco, fluid_locomotive})
