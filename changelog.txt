@@ -1,34 +1,14 @@
---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+Version: 0.18.5
+Date: 2020/04/25
+  Info:
+    - migrated to use the fluidTrains mod for the fluid handling logic
+  Bugfix:
+    - fixed changelog not showing in game
+---------------------------------------------------------------------------------------------------
 Version: 0.18.4
-  Changes:
+  Change:
     - full rewrite that allows the locomotives to be filled with fluid steam directly
     - removed all unnecessary recipes (barrels, heat exchange)
   Note:
-    - this version is incompatible with all previous versions
-
----------------------------------------------------------------------------------------------------
-Version: 0.18.3
-  Changes:
-    - increased processing speed for steam barrels
-    - increased processing speed for superheated steam barrels
-    - increased processing speed of steam-steam heat exchange
-
----------------------------------------------------------------------------------------------------
-Version: 0.18.2
-  Info:
-    - reduced thumbnail size by 1MB
-
----------------------------------------------------------------------------------------------------
-Version: 0.18.1
-  Changes:
-    - increased steam barrel stack size to 10
-    - changed Steam locomotive slot assignments from 5 -> 1 to 3 -> 3. (Locomotive inventory increased from 5 barrels to 30)
-    - increased energy of superheated steam barrel to 45MJ (reduced power loss from 38.1% to 7.22%)
-    - increased vehicle acceleration and max speed
-    - changed steam-steam heat exchange to produce 95 units of steam (instead of 90)
-    - reduced water consumption of steam-steam heat exchange from 90 to 80
-
----------------------------------------------------------------------------------------------------
-Version: 0.18.0
-  Info:
-    - initial release
+    - this version is incompatible with previous versions

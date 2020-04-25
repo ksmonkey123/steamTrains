@@ -33,14 +33,15 @@ local steam_proxy = {
 	icon_size = fluid_steam.icon_size,
 	icon_mipmaps = fluid_steam.icon_mipmaps,
 	icons = fluid_steam.icons,
-	stack_size = 4294967295,
+	stack_size = 20000,
 	fuel_category = "SteamTrains-steam",
 	flags = {"hidden"},
 	name = "SteamTrains-steamProxy",
 	localised_name = {"", {"fluid-name.steam"}},
 	fuel_value = "1500kJ",
 	fuel_acceleration_multiplier = 1.2,
-	fuel_top_speed_multiplier = 1.05
+	fuel_top_speed_multiplier = 1.05,
+	group = "fluidTrains_fake"
 }
 
 local mixed_steam_proxy = table.deepcopy(steam_proxy)
