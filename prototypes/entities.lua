@@ -4,6 +4,7 @@ fluid_locomotive.name = "SteamTrains-locomotive"
 fluid_locomotive.minable.result = "SteamTrains-locomotive"
 fluid_locomotive.burner.fuel_category = "SteamTrains-steam"
 fluid_locomotive.burner.fuel_inventory_size = 1
+fluid_locomotive.burner.burnt_inventory_size = 1
 fluid_locomotive.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
 
 local steam_loco = util.table.deepcopy(data.raw["locomotive"]["locomotive"])
