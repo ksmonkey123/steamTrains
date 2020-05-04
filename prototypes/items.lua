@@ -40,8 +40,7 @@ local steam_proxy = {
 	localised_name = {"", {"fluid-name.steam"}},
 	fuel_value = "1500kJ",
 	fuel_acceleration_multiplier = 1.2,
-	fuel_top_speed_multiplier = 1.05,
-	group = "fluidTrains_fake"
+	fuel_top_speed_multiplier = 1.05
 }
 
 local mixed_steam_proxy = table.deepcopy(steam_proxy)

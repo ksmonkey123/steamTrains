@@ -1,3 +1,7 @@
+local tankApi = require "__fluidTrains__/api/data"
+
+tankApi.generateTank(20000)
+
 local function patchBarrel(barrel, energy)
 	if barrel then
 		if not barrel.fuel_category then
