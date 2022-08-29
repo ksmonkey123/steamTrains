@@ -16,3 +16,8 @@ if settings.startup["steamTrains_enable_legacy"].value then
   data:extend({steam_loco})
 end
 
+
+if mods["trainConstructionSite"] and mods["barrels-of-steam"] then
+  require("__trainConstructionSite__/modding-interface")
+  trainConstructionSite.remote.addCustomFuelTrain("locomotive", "SteamTrains-locomotive", "steam-barrel-165")
+end

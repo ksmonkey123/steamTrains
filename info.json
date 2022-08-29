@@ -7,5 +7,5 @@
 	"homepage": "",
 	"description": "",
 	"factorio_version": "1.1",
-	"dependencies": ["base >= 1.1.5", "fluidTrains >= 1.0.0", "? barrels-of-steam >= 18.0.6" ]
+	"dependencies": ["base >= 1.1.5", "fluidTrains >= 1.0.0", "? barrels-of-steam >= 18.0.6", "? trainConstructionSite >= 0.2.19" ]
 }
