@@ -6,11 +6,13 @@ fluid_locomotive.burner.fuel_category = "SteamTrains-steam"
 fluid_locomotive.burner.fuel_inventory_size = 1
 fluid_locomotive.burner.burnt_inventory_size = 1
 fluid_locomotive.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
+data:extend({fluid_locomotive})
 
-local steam_loco = util.table.deepcopy(data.raw["locomotive"]["locomotive"])
-steam_loco.name = "steam-locomotive"
-steam_loco.minable.result = "SteamTrains-locomotive"
-steam_loco.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
+if settings.startup["steamTrains_enable_legacy"].value then
+  local steam_loco = util.table.deepcopy(data.raw["locomotive"]["locomotive"])
+  steam_loco.name = "steam-locomotive"
+  steam_loco.minable.result = "SteamTrains-locomotive"
+  steam_loco.color = { r = 0.2, g = 0.7, b = 1, a = 0.5 }
+  data:extend({steam_loco})
+end
 
--- Add new locomotive to the game
-data:extend({steam_loco, fluid_locomotive})

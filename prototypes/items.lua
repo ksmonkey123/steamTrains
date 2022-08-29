@@ -9,21 +9,23 @@ local fluid_locomotive_item = {
     place_result = "SteamTrains-locomotive",
     stack_size = 5
 }
+data:extend({fluid_locomotive_item})
 
-local old_locomotive = {
-    type = "item-with-entity-data",
-    name = "steam-locomotive",
-    icon = "__steamTrains__/graphics/icons/steam-locomotive.png",
-    icon_size = 64,
-	icon_mipmaps = 4,
-    subgroup = "transport",
-    order = "a[train-system]-fz[diesel-locomotive]",
-    place_result = "steam-locomotive",
-    stack_size = 5,
-	flags = { "hidden" }
-}
-
-data:extend({fluid_locomotive_item, old_locomotive})
+if settings.startup["steamTrains_enable_legacy"].value then
+    local old_locomotive = {
+        type = "item-with-entity-data",
+        name = "steam-locomotive",
+        icon = "__steamTrains__/graphics/icons/steam-locomotive.png",
+        icon_size = 64,
+        icon_mipmaps = 4,
+        subgroup = "transport",
+        order = "a[train-system]-fz[diesel-locomotive]",
+        place_result = "steam-locomotive",
+        stack_size = 5,
+        flags = { "hidden" }
+    }
+    data:extend({old_locomotive})
+end
 
 local fluid_steam = data.raw["fluid"]["steam"]
 
