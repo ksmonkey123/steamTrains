@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2020/12/14
+  Changes:
+    - tweaked locomotive recipe: Reduced recipe from 4 steam engines to 1. Compensated by adding 10 iron gears.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2020/12/12
+  Changes:
+    - re-added optional dependency to barrels-of-steam after their update to 1.1.
+    - steam barrels can be used in steam locomotives as an alternative to fluid steam. This is useful - for instance - to bring a locomotive to a refueling station when it has run out of fuel.
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2020/12/09
+  Changes:
+    - compatibility update for fluidTrains 1.0.0 and factorio 1.1
+    - removed optional dependency to barrels-of-steam. Not yet updated for 1.1.
+---------------------------------------------------------------------------------------------------
 Version: 0.18.9
 Date: 2020/05/04
   Change:
